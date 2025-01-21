@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Box, TextField, Button, Typography, Link } from "@mui/material";
+import { Box, TextField, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const ForgotPasswordScreen: React.FC = () => {
     const [email, setEmail] = useState<string>("");
@@ -41,7 +42,7 @@ const ForgotPasswordScreen: React.FC = () => {
           </Button>
         </form>
         <Box sx={{ mt: 2 }}>
-          <Link href="/login">Back to Login</Link>
+          <Link to="/login">Back to Login</Link>
         </Box>
       </Box>
     );
