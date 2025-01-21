@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; // Axios for HTTP requests
 import '../../AuthStyles.css';
+import { Link } from 'react-router-dom';
 
 interface LoginFormState {
   email: string;
@@ -108,6 +109,7 @@ export const LoginScreen: React.FC = () => {
         <div className="auth-links">
           <a href="/signup" className="auth-link">Don't have an account? Sign up</a>
           <br />
+          <Link to="/forgot-password" className="auth-link">Forgot Password?</Link>
           <a href="/forgot-password" className="auth-link">Forgot Password?</a>
         </div>
       </div>
