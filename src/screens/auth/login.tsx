@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios'; // Axios for HTTP requests
+import axios from 'axios'; 
 import '../../AuthStyles.css';
 import { Link } from 'react-router-dom';
 
@@ -34,14 +34,13 @@ export const LoginScreen: React.FC = () => {
         },
       });
 
-      // Handle successful login
+
       console.log('Login successful:', response.data);
 
-      // Save token or other data if necessary
+
       localStorage.clear();
       localStorage.setItem('authToken', response.data.token);
 
-      // Redirect to the dashboard or another screen
       window.location.href = '/';
     } catch (error: any) {
       setLoading(false);

@@ -41,7 +41,7 @@ const SignupScreen: React.FC = () => {
     }
 
     try {
-      // Replace with your actual signup endpoint
+     
       const response = await axios.post('https://md-editor-server-uvps.onrender.com/api/auth/register', {
         username: formState.username,
         email: formState.email,
@@ -50,14 +50,14 @@ const SignupScreen: React.FC = () => {
 
       console.log('Signup successful o:', response.data.message);
 
-      // Handle successful response
+     
       setSuccessMessage('Account created successfully!');
       
       setTimeout(() => { window.location.href = '/login'; }, 2000);
 
       setFormState({ username: '', email: '', password: '', confirmPassword: '' });
     } catch (error: any) {
-      // Handle error response
+      
       setApiError(error.response?.data?.message || 'An error occurred. Please try again.');
     }
   };

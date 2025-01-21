@@ -7,7 +7,7 @@ const ForgotPasswordScreen: React.FC = () => {
   
     const handleSubmit = (e: React.FormEvent) => {
       e.preventDefault();
-      // Add forgot password logic here, e.g., call the API
+      //TODO: Add forgot password logic here when God touches my heart
       console.log("Reset link sent to:", email);
     };
   

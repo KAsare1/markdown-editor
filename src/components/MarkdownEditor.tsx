@@ -14,10 +14,10 @@ const MarkdownEditor = () => {
   const [markdown, setMarkdown] = useState<string>("");
   const [socket, setSocket] = useState<any>(null);
   const [collaboratorCount, setCollaboratorCount] = useState<number>(1);
-  const [collaboratorEmail, setCollaboratorEmail] = useState<string>(""); // New state for the email input
+  const [collaboratorEmail, setCollaboratorEmail] = useState<string>(""); 
   const token = localStorage.getItem("authToken");
 
-  // Initialize socket connection and fetch document
+
   useEffect(() => {
     const socketConnection = io(API_URL, {
       auth: { token },
@@ -26,7 +26,7 @@ const MarkdownEditor = () => {
       reconnectionDelay: 1000
     });
 
-    // Set up socket event handlers
+
     socketConnection.on("connect", () => {
       console.log("Connected to server");
       socketConnection.emit("joinDocument", documentId);
@@ -46,7 +46,7 @@ const MarkdownEditor = () => {
       console.error("Socket connection error:", error);
     });
 
-    // Fetch initial document content
+  
     const fetchDocument = async () => {
       try {
         const response = await axios.get(
