@@ -107,10 +107,9 @@ export const LoginScreen: React.FC = () => {
         </form>
 
         <div className="auth-links">
-          <a href="/signup" className="auth-link">Don't have an account? Sign up</a>
+        <Link to="/signup" className="auth-link">Don't have an account? Sign up</Link>
           <br />
           <Link to="/forgot-password" className="auth-link">Forgot Password?</Link>
-          <a href="/forgot-password" className="auth-link">Forgot Password?</a>
         </div>
       </div>
     </div>

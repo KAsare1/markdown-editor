@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../../AuthStyles.css';
+import { Link } from 'react-router-dom';
 
 interface SignupFormState {
   username: string;
@@ -145,7 +146,7 @@ const SignupScreen: React.FC = () => {
         </form>
 
         <div className="auth-links">
-          <a href="/login" className="auth-link">Already have an account? Sign in</a>
+        <Link to="/login" className="auth-link">Already have an account? Sign in</Link>
         </div>
       </div>
     </div>
