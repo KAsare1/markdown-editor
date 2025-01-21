@@ -47,7 +47,7 @@ const SignupScreen: React.FC = () => {
         password: formState.password,
       });
 
-      console.log('Signup successful:', response.data.message);
+      console.log('Signup successful o:', response.data.message);
 
       // Handle successful response
       setSuccessMessage('Account created successfully!');
