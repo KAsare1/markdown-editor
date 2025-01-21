@@ -41,6 +41,7 @@ const HomePage = () => {
       });
       setDocuments(response.data);
     } catch (error: any) {
+      navigate('/login');
       setError(error.response?.data?.message || 'Failed to fetch documents');
     }
   };
